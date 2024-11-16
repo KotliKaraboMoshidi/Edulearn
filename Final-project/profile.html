@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - EduLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="media/branding/logo.png" alt="EduLearn Logo" class="logo">
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="change-password.html">Change Password</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="about.html">About</a>
+            <a href="ajax/logout.php">Sign Out</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="profile-info">
+            <h2 id="welcome-message">Welcome, User!</h2>
+            <p><strong>Username:</strong> <span id="username">Loading...</span></p>
+            <p><strong>Email:</strong> <span id="email">Loading...</span></p>
+            <p><strong>Member Since:</strong> <span id="member-since">Loading...</span></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 EduLearn, All rights reserved.</p>
+    </footer>
+
+    <!-- Including session-check.js to update placeholders -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

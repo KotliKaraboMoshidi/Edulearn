@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form - EduLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="media/branding/logo.png" alt="EduLearn Logo" class="logo">
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="change-password.html">Change Password</a>
+            <a href="about.html">About</a>
+            <a href="ajax/logout.php">Sign Out</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Feedback Form</h1>
+        <form id="feedback-form">
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
+            <button type="submit" class="btn">Submit Feedback</button>
+            <p id="message"></p> <!-- Message area for feedback response -->
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 EduLearn, All rights reserved.</p>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/session-check.js"></script>
+    <script src="js/feedback-submit.js"></script> <!-- Separate file for handling feedback form submission -->
+</body>
+</html>

@@ -1,0 +1,519 @@
+/* General container and card styling */
+@font-face {
+    font-family: 'Inter';
+    src: url("../fonts/Inter/Inter-Regular.ttf") format('truetype');
+    font-style: normal;
+}
+
+body {
+    font-family: 'Inter', "Source Sans Pro", Helvetica, Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+
+/* Container and card styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Disabled button styling */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Error and success message styling */
+.error-message,
+.success-message {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Additional links styling */
+.additional-links {
+    margin-top: 20px;
+}
+
+.additional-links p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.additional-links .sign-in-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.additional-links .sign-in-link:hover {
+    color: #0056b3;
+}
+
+/* Forgot password link styling */
+.forgot-password-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.forgot-password-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forgot-password-link:hover {
+    color: #0056b3;
+}
+
+/* Spinner overlay */
+.spinner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    z-index: 10;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spinner styling */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner text styling */
+.spinner-text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Dashboard styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #007bff;
+    color: white;
+}
+
+header img.logo {
+    width: 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+    padding: 10px; /* Adjust padding to control circle size */
+    border: 2px solid white; /* Circle border */
+    border-radius: 50%; /* Makes it a circle */
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    display: inline-block; /* Ensures padding affects the link */
+}
+
+nav a:hover {
+    color: #ffc107;
+    background-color: white; /* Adds a contrasting background on hover */
+    transform: scale(1.1); /* Slightly enlarges the circle on hover */
+    border-color: #ffc107; /* Changes the border color on hover */
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    flex: 1;
+}
+
+main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.kpi {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.kpi div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px; /* Add space between the cards */
+}
+
+.kpi div:hover {
+    transform: scale(1.05); /* Enlarge the card */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Make the shadow more prominent */
+}
+
+.kpi div:hover h2,
+.kpi div:hover p {
+    color: #007bff;
+}
+
+.kpi div:hover {
+    background-color: #f4f4f4;
+    color: red;
+}
+
+.kpi div h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.kpi div p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Resources Section */
+.resources {
+    width: 80%;
+    text-align: center;
+}
+
+.resources h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources ul li {
+    margin: 10px 0;
+}
+
+.resources ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.resources ul li a:hover {
+    color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 30px; /* Adjusted padding for footer */
+    background-color: #007bff;
+    color: white;
+    height: 60px; /* Set height to match the navbar */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling for Forgotten Password */
+.container-Fpassword {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styling */
+.container-Fpassword h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Paragraph styling */
+.container-Fpassword p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+}
+
+/* Label styling */
+.container-Fpassword .form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Input field styling */
+.container-Fpassword .form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Submit button styling */
+.container-Fpassword button#submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-Fpassword button#submit-btn:hover {
+    background-color: #3a7bc1;
+}
+
+/* Message area styling */
+.container-Fpassword #message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #d9534f; /* Red color for error messages */
+}
+
+/* Link styling */
+.container-Fpassword a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.container-Fpassword a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 500px) {
+    .container-Fpassword {
+        padding: 15px;
+    }
+
+    .container-Fpassword button#submit-btn {
+        font-size: 14px;
+    }
+}
+/* Additional CSS for form styles */
+
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button.btn:hover {
+    background-color: #004292;
+}
+
+/* Message styling */
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+}
+/* Profile Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.profile-info {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.profile-info h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.profile-info p {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    color: #555;
+}
+
+
